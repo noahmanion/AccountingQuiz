@@ -4,4 +4,35 @@ body {
 
 #results {
   display: none;
+  margin-top: 10px;
+  background-color: #00a1e1;
+  padding: 10px;
+}
+
+#results h3 {
+  color: #fff;
+  font-size: 28px;
+  text-align:center;
+  font-weight:600;
+}
+
+#results form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#results form input {
+  display: block;
+  margin: 0 auto;
+  width: 42%;
+  margin-bottom: 7px;
+}
+
+#results button {
+  display: block;
+  width: 42%;
+  margin: 0 auto;
+  background-color: #ed1c24;
+  color: #fff;
+  font-size:16px;
 }
