@@ -1,5 +1,10 @@
 var score = 1;
 $("#quizForm").on('submit', function() {
+  /**
+  for (i=1; i<=10; i++) {
+          var "q" + i = parseInt(document.forms['quizForm']['q' + i].value);
+        }
+     **/
   var q1 = parseInt(document.forms['quizForm']['q1'].value);
   var q2 = parseInt(document.forms['quizForm']['q2'].value);
   var q3 = parseInt(document.forms['quizForm']['q3'].value);
@@ -11,7 +16,7 @@ $("#quizForm").on('submit', function() {
   var q9 = parseInt(document.forms['quizForm']['q9'].value);
   var q10 = parseInt(document.forms['quizForm']['q10'].value);
 
-  //console.log("q1 is " + q1 + " q2 is " + q2 + " q3 is " + q3 + " q4 is " + q4 + " q5 is " + q5);
+  console.log("q1 is " + q1 + " q2 is " + q2 + " q3 is " + q3 + " q4 is " + q4 + " q5 is " + q5);
   
   //Validation
   for(i=1; i<=10; i++) {
@@ -47,17 +52,27 @@ $("#quizForm").on('submit', function() {
       }
       $("#results").show();
         //$('<p>'+score+'</p>').appendTo('#results');
+        /**
         document.getElementById("score").value = score;
-        document.getElementById("a1").value = q1
-        document.getElementById("a2").value = q2
-        document.getElementById("a3").value = q3
-        document.getElementById("a4").value = q4
-        document.getElementById("a5").value = q5
-        document.getElementById("a6").value = q6
-        document.getElementById("a7").value = q7
-        document.getElementById("a8").value = q8
-        document.getElementById("a9").value = q9
+        for (i=1; i<=10; i++) {
+          console.log("the answer to q" + i + " is " + parseInt(document.forms['quizForm']['q' + i].value));
+          //document.getElementById("#a"+i).value = parseInt(document.forms['quizForm']['q' + i ].value);
+        }
+        **/
+        document.getElementById("score").value = score;
+        document.getElementById("a1").value = q1;
+        document.getElementById("a2").value = q2;
+        document.getElementById("a3").value = q3;
+        document.getElementById("a4").value = q4;
+        document.getElementById("a5").value = q5;
+        document.getElementById("a6").value = q6;
+        document.getElementById("a7").value = q7;
+        document.getElementById("a8").value = q8;
+        document.getElementById("a9").value = q9;
         document.getElementById("a10").value = q10
+        
+        document.getElementById("score").value = score;
+
 
 
       return false;

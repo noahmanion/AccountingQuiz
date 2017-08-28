@@ -16,7 +16,7 @@
 Take our free 10-question assessment and find out how you compare to other small businesses!
 </h2>
         
-        <form name="quizForm" id="quizForm">
+        <form name="quizForm" id="quizForm" name="quiz">
           <div class="row">
             <div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1 com-sm-offset-1">
               <h5>1. When do you receive your monthly financial statements?</h5>
@@ -80,32 +80,36 @@ Take our free 10-question assessment and find out how you compare to other small
                 <input type="radio" name="q10" value="1" id="q52"> I’m good - my accountant has been with me for years and I trust them</input><br />
                 <input type="radio" name="q10" value="0" id="q51"> I have no idea, but I hear a lot about this and it really worries me</input><br />
               <br />
-              <input class="btn btn-default" type="submit" value="Submit" >
+              <input class="btn btn-default" type="submit" value="Submit" name="quiz" >
       
             </div>
           </div>
         </form>
         <div id="results">
           <h3>To Receive Your Score, Please Complete This Form:</h3>
-          <form id="mc-form-example" class="mc-form-example" action="http://tgg-accounting.com/new_2015/wp-content/themes/headway-tgg/quiz_signup.php" method="POST"><input id="mc-fname" name="FNAME" required="" type="text" placeholder="Enter Your First Name Here" />
+          <!--action="http://tgg-accounting.com/new_2015/wp-content/themes/headway-tgg/quiz_signup.php" -->
+          <form id="mc-form-example" class="mc-form-example" action="/quiz_signup.php" method="POST" name="getScore">
+          <input id="mc-fname" name="FNAME" required="" type="text" placeholder="Enter Your First Name Here" />
         <input id="mc-lname" name="LNAME" required="" type="text" placeholder="Enter Your Last Name Here" />
         <input id="mc-email" name="email" required="" type="email" placeholder="Enter Your Business Email Here" />
         <input id="status" name="status" type="hidden" value="subscribed" />
-        <input id="score" name="score" type="hidden" value="" />
-        <input id="a1" name="a1" type="hidden" value="" />
-        <input id="a2" name="a2" type="hidden" value="" />
-        <input id="a3" name="a3" type="hidden" value="" />
-        <input id="a4" name="a4" type="hidden" value="" />
-        <input id="a5" name="a5" type="hidden" value="" />
-        <input id="a6" name="a6" type="hidden" value="" />
-        <input id="a7" name="a7" type="hidden" value="" />
-        <input id="a8" name="a8" type="hidden" value="" />
-        <input id="a9" name="a9" type="hidden" value="" />
-        <input id="a10" name="a10" type="hidden" value="" />
-        </form><button type="submit" value="submit" onclick="ga('send','event', 'CTA', 'Click', 'Quiz Response');">Get Your Score</button>
+        <input id="score" name="score" value="" />
+        <input id="a1" name="a1" value="" />
+        <input id="a2" name="a2" value="" />
+        <input id="a3" name="a3" value="" />
+        <input id="a4" name="a4" value="" />
+        <input id="a5" name="a5" value="" />
+        <input id="a6" name="a6" value="" />
+        <input id="a7" name="a7" value="" />
+        <input id="a8" name="a8" value="" />
+        <input id="a9" name="a9" value="" />
+        <input id="a10" name="a10" value="" />
+        <input id="status" name="status" type="hidden" value="subscribed" />
+        </form><button type="submit" value="submit" form ="mc-form-example" name="getScore">Get Your Score</button>
         </div>
 
       </div>
+    </div>
     </div>
   </div>
   <script type="text/javascript" src="quiz.js"></script>
